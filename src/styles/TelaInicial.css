@@ -104,10 +104,14 @@
     width: 100%;
   }
 
-  .conteudo.mobile .baixo p {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-  }
+.conteudo.mobile .baixo {
+  margin-top: -2rem; /* sobe o conteúdo */
+}
+
+.conteudo.mobile .baixo p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
 }
 
 /* Botão compartilhado */
