@@ -104,6 +104,12 @@
     height: 50vh;
     width: 100%;
   }
+
+  .conteudo.mobile .baixo p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+}
 .conteudo.mobile .baixo {
   display: flex;
   flex-direction: column;
@@ -111,7 +117,6 @@
   margin-top: 2rem; /* Aumenta a distância do meio */
   margin-bottom: 2rem; /* Evita colar no rodapé */
 }
-
 
 /* Botão compartilhado */
 .botao {
