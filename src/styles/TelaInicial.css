@@ -47,12 +47,18 @@
   z-index: 1;
 }
 
-/* Desktop content */
+/* ========================
+   DESKTOP – ALINHADO À ESQUERDA
+   ======================== */
 .conteudo.desktop {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
   z-index: 2;
-  text-align: center;
   color: white;
+  text-align: left;
+  max-width: 500px;
   padding: 2rem;
 }
 
@@ -67,7 +73,9 @@
   margin: 0.3rem 0;
 }
 
-/* Mobile content (centralizado) */
+/* ========================
+   MOBILE – CENTRALIZADO VERTICALMENTE
+   ======================== */
 .conteudo.mobile {
   display: none;
 }
@@ -80,8 +88,8 @@
   .conteudo.mobile {
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centraliza verticalmente */
-    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     height: 100vh;
     padding: 1.5rem;
@@ -122,7 +130,9 @@
   }
 }
 
-/* Botão compartilhado */
+/* ========================
+   BOTÃO – COMPARTILHADO
+   ======================== */
 .botao {
   display: inline-flex;
   align-items: center;
