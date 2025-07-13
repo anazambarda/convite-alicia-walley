@@ -100,18 +100,14 @@
   }
 
   .conteudo.mobile .espaco-imagem {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
   }
 
-.conteudo.mobile .baixo {
-  margin-top: -2rem; /* sobe o conteúdo */
-}
-
-.conteudo.mobile .baixo p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
+  .conteudo.mobile .baixo p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
 }
 
 /* Botão compartilhado */
