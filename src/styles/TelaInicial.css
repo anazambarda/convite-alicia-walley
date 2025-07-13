@@ -88,11 +88,12 @@
     padding: 1.5rem;
   }
 
-  .conteudo.mobile .topo h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+.conteudo.mobile .topo h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.2rem; /* Aumentado */
+  margin-bottom: 0.5rem;
+}
+
 
   .conteudo.mobile .topo .data {
     font-size: 1.2rem;
