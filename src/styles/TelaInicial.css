@@ -16,8 +16,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* preenche o fundo */
-  object-position: center;  /* centraliza a imagem */
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
   display: none;
 }
@@ -47,7 +47,8 @@
   z-index: 1;
 }
 
-.conteudo {
+/* Desktop content */
+.conteudo.desktop {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -55,17 +56,61 @@
   padding: 2rem;
 }
 
-.conteudo h1 {
+.conteudo.desktop h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 4rem;
   margin-bottom: 1rem;
 }
 
-.conteudo p {
+.conteudo.desktop p {
   font-size: 1.5rem;
   margin: 0.3rem 0;
 }
 
+/* Mobile content (oculto por padrão) */
+.conteudo.mobile {
+  display: none;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .conteudo.desktop {
+    display: none;
+  }
+
+  .conteudo.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    padding: 1.5rem;
+  }
+
+  .conteudo.mobile .topo h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .conteudo.mobile .topo .data {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .conteudo.mobile .espaco-imagem {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .conteudo.mobile .baixo p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Botão compartilhado */
 .botao {
   display: inline-flex;
   align-items: center;
@@ -90,14 +135,6 @@
 }
 
 @media (max-width: 768px) {
-  .conteudo h1 {
-    font-size: 2.5rem; /* antes era 4rem */
-  }
-
-  .conteudo p {
-    font-size: 1.1rem; /* antes era 1.5rem */
-  }
-
   .botao {
     font-size: 0.95rem;
     padding: 0.7rem 1.2rem;

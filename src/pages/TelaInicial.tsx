@@ -12,7 +12,9 @@ function TelaInicial() {
       <img src={bgDesktop} alt="Fundo Desktop" className="bg-img bg-desktop" />
       <img src={bgMobile} alt="Fundo Mobile" className="bg-img bg-mobile" />
       <div className="overlay" />
-      <div className="conteudo">
+
+      {/* DESKTOP */}
+      <div className="conteudo desktop">
         <h1>Alicia & Walley</h1>
         <p>Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!</p>
         <p>27 de Dezembro de 2025</p>
@@ -20,6 +22,24 @@ function TelaInicial() {
           <MailIcon size={18} />
           Abrir Convite
         </button>
+      </div>
+
+      {/* MOBILE */}
+      <div className="conteudo mobile">
+        <div className="topo">
+          <h1>Alicia & Walley</h1>
+          <p className="data">27 de Dezembro de 2025</p>
+        </div>
+
+        <div className="espaco-imagem" />
+
+        <div className="baixo">
+          <p>Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!</p>
+          <button className="botao" onClick={() => navigate('/convite')}>
+            <MailIcon size={18} />
+            Abrir Convite
+          </button>
+        </div>
       </div>
     </div>
   );
