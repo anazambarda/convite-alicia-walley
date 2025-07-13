@@ -101,7 +101,7 @@
   }
 
   .conteudo.mobile .espaco-imagem {
-    height: 50vh;
+    height: 40vh;
     width: 100%;
   }
 
@@ -114,9 +114,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem; /* Aumenta a distância do meio */
-  margin-bottom: 2rem; /* Evita colar no rodapé */
+  margin-top: 1.5rem;  /* reduzido */
+  margin-bottom: 1rem; /* também reduzido */
 }
+
 
 /* Botão compartilhado */
 .botao {
