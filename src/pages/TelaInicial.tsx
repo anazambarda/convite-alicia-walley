@@ -1,6 +1,6 @@
 import '../styles/TelaInicial.css';
 import bgDesktop from '../assets/bg-desktop.jpg';
-import bgMobile from '../assets/bg-mobile.jpg';
+import bgMobile from '../assets/3f3f868d-5ccc-46ae-baea-e5a133e136a1 (1).jpg';
 import { useNavigate } from 'react-router-dom';
 import { MailIcon } from 'lucide-react';
 
