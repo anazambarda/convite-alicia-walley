@@ -1,0 +1,48 @@
+.carrossel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 3rem auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-slide img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+.carrossel-botao {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carrossel-botao:hover {
+  background: white;
+}
+
+.carrossel-botao.esq {
+  left: 1rem;
+}
+
+.carrossel-botao.dir {
+  right: 1rem;
+}
+
+@media (max-width: 600px) {
+  .carrossel-botao {
+    font-size: 1.5rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

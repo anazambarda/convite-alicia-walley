@@ -1,4 +1,193 @@
 .convite {
-  padding: 2rem;
+  background: #fafafa;
+  padding: 4rem 1.5rem;
   text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contador */
+.contador h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tempo {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.tempo div span {
+  font-size: 2rem;
+  display: block;
+}
+
+.tempo div p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.titulo-sessao {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin: 4rem 0 2rem;
+  color: #333;
+}
+
+/* Cartões */
+.cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cartao {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  max-width: 300px;
+  flex: 1 1 280px;
+}
+
+.cartao h4 {
+  font-size: 1.3rem;
+  margin: 1rem 0 0.5rem;
+  color: #111;
+}
+
+.cartao p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.3rem 0;
+}
+
+.cartao a {
+  margin-top: 1.2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #e91e63;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.cartao a:hover {
+  color: #c2185b;
+}
+
+/* Galeria */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.foto {
+  width: 200px;
+  text-align: center;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  height: 150px;
+}
+
+.foto span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* RSVP */
+.rsvp {
+  background: #f9f9f9;
+  padding: 4rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+.rsvp .prazo {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.formulario {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.formulario input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.formulario fieldset {
+  margin-top: 1rem;
+  border: none;
+}
+
+.formulario fieldset legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.formulario fieldset label {
+  font-weight: normal;
+  margin-right: 1.5rem;
+}
+
+.formulario button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #e91e63;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario button:hover {
+  background: #d81b60;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .tempo {
+    gap: 1rem;
+  }
+
+  .tempo div span {
+    font-size: 1.5rem;
+  }
+
+  .cartao {
+    padding: 1.5rem;
+  }
 }
