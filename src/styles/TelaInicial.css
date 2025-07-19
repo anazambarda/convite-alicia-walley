@@ -88,14 +88,15 @@
 .conteudo.mobile {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ← era flex-end */
+  justify-content: flex-end; /* ← Mantemos isso */
   align-items: center;
   text-align: center;
   height: 100vh;
-  padding: 4rem 1.5rem 2rem; /* ↑ aumentou o topo, diminuiu o bottom */
+  padding: 2rem 1.5rem 4rem; /* ↓ Aumentou o bottom padding */
   z-index: 2;
-  color: white; 
+  color: white;
 }
+
 
 
   .conteudo.mobile .topo h1 {
