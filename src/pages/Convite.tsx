@@ -155,9 +155,9 @@ const Convite = () => {
       <div className="cartao-simples">
         <p>27 de Dezembro de 2025 às 16:30</p>
         <p>Igreja São José</p>
-        <p>Praça Nossa Sra. do Brasil, 01 - Jardim América, São Paulo</p>
+        <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz</p>
         <a
-          href="https://www.google.com/maps/place/Paróquia+Nossa+Senhora+do+Brasil"
+          href="https://maps.app.goo.gl/ARA1SyUphaC5rQLw6"
           target="_blank"
           rel="noreferrer"
           className="link-gold"
@@ -178,7 +178,7 @@ const Convite = () => {
         <p>Salão Assmann</p>
         <p>Estr. Bruno Pritsch - Santa Cruz do Sul, RS</p>
         <a
-          href="https://www.google.com/maps/place/Sal%C3%A3o+Assmann"
+          href="https://maps.app.goo.gl/X7NyNayzBLG1Hom46"
           target="_blank"
           rel="noreferrer"
           className="link-gold"

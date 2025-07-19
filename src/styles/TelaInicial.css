@@ -92,7 +92,7 @@
   align-items: center;
   text-align: center;
   height: 100vh;
-  padding: 2rem 1.5rem 4rem; /* ↓ Aumentou o bottom padding */
+  padding: 2rem 1.5rem 9rem; /* ↓ Aumentou o bottom padding */
   z-index: 2;
   color: white;
 }
