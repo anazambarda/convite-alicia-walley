@@ -51,7 +51,7 @@
 .titulo-nomes {
   position: absolute;
   z-index: 3;
-  top: 15%; /* ajuste conforme desejado */
+  top: 10%; /* ajuste conforme desejado */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
