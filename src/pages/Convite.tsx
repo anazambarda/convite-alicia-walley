@@ -205,7 +205,7 @@ const scrollVoltarParaTopo = (duration: number) => {
         <img src={igrejaCerimonia} alt="Igreja da cerimônia" />
       </div>
       <div className="cartao-simples" id='igreja-rem'>
-        <p>27 de Dezembro de 2025 às 16h30min</p>
+        <p>27 de dezembro de 2025 às 16h30min</p>
         <p>Igreja São José</p>
         <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz, RS</p>
         <a

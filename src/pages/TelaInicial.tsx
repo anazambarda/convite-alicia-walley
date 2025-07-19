@@ -34,7 +34,7 @@ function TelaInicial() {
           <p className="data">
             Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!
           </p>
-          <p>27 de Dezembro de 2025</p>
+          <p>27 de dezembro de 2025</p>
           <button className="botao" onClick={() => navigate('/convite')}>
             <MailIcon size={18} />
             Abrir Convite
