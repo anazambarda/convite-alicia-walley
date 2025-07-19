@@ -28,14 +28,14 @@ function TelaInicial() {
       <div className="conteudo mobile">
         <div className="topo">
           <h1>Alícia & Walley</h1>
-          <p className="data">
-            Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!
-          </p>
         </div>
 
         <div className="espaco-imagem" />
 
         <div className="baixo">
+          <p className="data">
+            Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!
+          </p>
           <p>27 de Dezembro de 2025</p>
           <button className="botao" onClick={() => navigate('/convite')}>
             <MailIcon size={18} />

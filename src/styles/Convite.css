@@ -2,7 +2,6 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -244,13 +243,22 @@ body, html {
   color: #d4af37;
   font-weight: bold;
   display: inline-block;
-  margin-top: 1rem;
   text-decoration: none;
+  margin-top: 1rem;
+  border: 1px solid #d4af37;
+padding: 0.3rem 0.8rem 0.5rem;
+  border-radius: 0.5rem;
+  line-height: 1; /* reduz espaço vertical da fonte */
+  vertical-align: middle; /* ajuda a manter o alinhamento */
+  transition: all 0.2s ease;
 }
+
 
 .link-gold:hover {
   color: #b28d1c;
+  border-color: #b28d1c; /* Cor da borda muda junto com o texto */
 }
+
 
 /* Logo */
 .logo-casal {
@@ -374,6 +382,9 @@ body, html {
   transform: scale(1.1);
 }
 
+#igreja-rem{
+    margin-top: -4.5rem;
+  }
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -388,4 +399,5 @@ body, html {
   .cartao {
     padding: 1.5rem;
   }
+  
 }

@@ -39,17 +39,67 @@ const Convite = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const iniciarAudio = () => {
+const scrollParaSugerirRolagem = () => {
+  const distance = 500; // pixels a rolar
+  const duration = 2000; // duração total em ms
+  const start = window.scrollY;
+  const startTime = performance.now();
+
+  const animateScroll = (time: number) => {
+    const elapsed = time - startTime;
+    const progress = Math.min(elapsed / duration, 1); // de 0 a 1
+
+    // Ease-out: desacelera no final
+    const ease = 1 - Math.pow(1 - progress, 3);
+
+    window.scrollTo(0, start + distance * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    } else {
+      // Quando terminar de descer, rola de volta pro topo com a mesma animação
+      setTimeout(() => {
+        scrollVoltarParaTopo(duration); // chama a volta
+      }, 300); // espera um pouco antes de voltar
+    }
+  };
+
+  requestAnimationFrame(animateScroll);
+};
+
+const scrollVoltarParaTopo = (duration: number) => {
+  const start = window.scrollY;
+  const startTime = performance.now();
+
+  const animateScroll = (time: number) => {
+    const elapsed = time - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+
+    window.scrollTo(0, start - start * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  requestAnimationFrame(animateScroll);
+};
+
+
+  const iniciarAudio = (): void => {
     audioRef.current?.play();
     setAudioAtivo(true);
     setMostrarAviso(false);
+    scrollParaSugerirRolagem();
   };
 
-  const recusarAudio = () => {
+  const recusarAudio = (): void => {
     setMostrarAviso(false);
+    scrollParaSugerirRolagem();
   };
 
-  const alternarAudio = () => {
+  const alternarAudio = (): void => {
     if (!audioRef.current) return;
 
     if (audioRef.current.paused) {
@@ -106,6 +156,8 @@ const Convite = () => {
         <img src={logoCasal} alt="Logo W e A" />
       </div>
 
+      <div className="linha-decorada" />
+
       {/* NOSSA HISTÓRIA */}
       <section className="nossa-historia">
         <h3 className="titulo-sessao">Nossa História</h3>
@@ -152,7 +204,7 @@ const Convite = () => {
       <div className="imagem-igreja">
         <img src={igrejaCerimonia} alt="Igreja da cerimônia" />
       </div>
-      <div className="cartao-simples">
+      <div className="cartao-simples" id='igreja-rem'>
         <p>27 de Dezembro de 2025 às 16:30</p>
         <p>Igreja São José</p>
         <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz</p>
