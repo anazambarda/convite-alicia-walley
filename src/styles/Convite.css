@@ -1,5 +1,5 @@
 .convite {
-  background: #fafafa;
+  background:  #edecd8;
   padding: 4rem 1.5rem;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
@@ -176,6 +176,113 @@
 .formulario button:hover {
   background: #d81b60;
 }
+.topo-banner {
+  width: 100vw;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.nossa-historia {
+  max-width: 700px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  text-align: center; /* <- centraliza o conteúdo */
+}
+
+.nossa-historia p {
+  margin-bottom: 1.2rem;
+}
+
+.nosso-video {
+   max-width: 700px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  text-align: center
+}
+
+.nosso-video p {
+  margin-bottom: 2rem;
+}
+
+.nosso-video video {
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+  height: auto;
+}
+
+.icone-gold {
+  color: #b18624; /* dourado */
+}
+
+.cartao a {
+  color: #b18624;
+  font-weight: bold;
+}
+
+.cartao a:hover {
+  color: #b18624;
+}
+
+.logo-casal {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-casal img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Cor dourada para ícones e links */
+.icone-gold {
+  color: #d4af37; /* ouro */
+}
+
+.link-gold {
+  color: #d4af37;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.link-gold:hover {
+  color: #b28d1c;
+}
+
+.imagem-igreja {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-igreja img {
+  max-width: 250px;
+  height: auto;
+}
+
 
 /* Responsivo */
 @media (max-width: 768px) {
