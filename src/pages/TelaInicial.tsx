@@ -1,6 +1,6 @@
 import '../styles/TelaInicial.css';
 import bgDesktop from '../assets/bg-desktop.jpg';
-import bgMobile from '../assets/fundomo.jpeg';
+import bgMobile from '../assets/Casal.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { MailIcon } from 'lucide-react';
 
@@ -28,7 +28,9 @@ function TelaInicial() {
       <div className="conteudo mobile">
         <div className="topo">
           <h1>Alícia & Walley</h1>
-          <p className="data">Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!</p>
+          <p className="data">
+            Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!
+          </p>
         </div>
 
         <div className="espaco-imagem" />
