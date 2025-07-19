@@ -85,17 +85,18 @@
     display: none;
   }
 
-  .conteudo.mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    padding: 2rem 1.5rem 2.5rem; /* ← SUBIU os textos reduzindo o padding-top */
-    z-index: 2;
-    color: white;
-  }
+.conteudo.mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ← era flex-end */
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 4rem 1.5rem 2rem; /* ↑ aumentou o topo, diminuiu o bottom */
+  z-index: 2;
+  color: white; 
+}
+
 
   .conteudo.mobile .topo h1 {
     font-family: 'Dancing Script', cursive;
