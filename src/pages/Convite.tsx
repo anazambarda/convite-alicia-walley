@@ -193,11 +193,11 @@ const Convite = () => {
       <section className="rsvp">
         <div style={{ textAlign: 'center', marginTop: '0' }}>
           <h3 className="titulo-sessao" style={{ marginBottom: '1rem', marginTop: '0' }}>
-            Confirme sua Presença
+            Contamos com sua Presença
           </h3>
-          <p className="prazo">Por favor, confirme sua presença até o dia 10 de Outubro de 2025.</p>
+          <p className="prazo">Por favor, confirme sua presença até o dia 10 de Novembro de 2025.</p>
           <p style={{ margin: '2rem 0 1.5rem' }}>
-            Clique no botão abaixo para preencher o formulário:
+            Clique no botão abaixo para confirmar sua presença:
           </p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScn0zT351qh8IlptAyePw9qQApL4qa6EYHPa4YUb_-wWXrkZg/viewform"
