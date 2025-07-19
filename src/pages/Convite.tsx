@@ -205,9 +205,9 @@ const scrollVoltarParaTopo = (duration: number) => {
         <img src={igrejaCerimonia} alt="Igreja da cerimônia" />
       </div>
       <div className="cartao-simples" id='igreja-rem'>
-        <p>27 de Dezembro de 2025 às 16:30</p>
+        <p>27 de Dezembro de 2025 às 16h30min</p>
         <p>Igreja São José</p>
-        <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz</p>
+        <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz, RS</p>
         <a
           href="https://maps.app.goo.gl/ARA1SyUphaC5rQLw6"
           target="_blank"
@@ -226,7 +226,8 @@ const scrollVoltarParaTopo = (duration: number) => {
         <img src={salaoFesta} alt="Imagem do salão da festa" />
       </div>
       <div className="cartao-simples">
-        <p>Logo após a cerimônia</p>
+        <p>Venha celebrar conosco esse momento especial!</p>
+        <p>Horário: 19h30min</p>
         <p>Salão Assmann</p>
         <p>Estr. Bruno Pritsch - Santa Cruz do Sul, RS</p>
         <a

@@ -47,25 +47,43 @@
   z-index: 1;
 }
 
+/* NOME FIXO NA IMAGEM */
+.titulo-nomes {
+  position: absolute;
+  z-index: 3;
+  top: 18%; /* ajuste conforme desejado */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.titulo-nomes h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.8rem;
+  color: white;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .titulo-nomes h1 {
+    font-size: 2.8rem;
+  }
+}
+
 /* ========================
    DESKTOP
    ======================== */
 .conteudo.desktop {
   position: absolute;
-  top: 50%;
+  bottom: 10%;
   right: 5%;
-  transform: translateY(-50%);
   z-index: 2;
   color: white;
   text-align: left;
   max-width: 500px;
   padding: 2rem;
-}
-
-.conteudo.desktop h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 4rem;
-  margin-bottom: 1rem;
 }
 
 .conteudo.desktop p {
@@ -85,33 +103,20 @@
     display: none;
   }
 
-.conteudo.mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* ← Mantemos isso */
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  padding: 2rem 1.5rem 9rem; /* ↓ Aumentou o bottom padding */
-  z-index: 2;
-  color: white;
-}
-
-
-
-  .conteudo.mobile .topo h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.8rem;
-    margin-bottom: 23rem;
+  .conteudo.mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 2rem 1.5rem 9rem;
+    z-index: 2;
+    color: white;
   }
 
-  .conteudo.mobile .topo .data {
-    font-size: 1rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .conteudo.mobile .espaco-imagem {
-    display: none;
+  .conteudo.mobile .topo {
+    display: none; /* Removido porque o título está fixo agora */
   }
 
   .conteudo.mobile .baixo {

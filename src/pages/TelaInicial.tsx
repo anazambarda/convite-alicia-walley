@@ -13,9 +13,13 @@ function TelaInicial() {
       <img src={bgMobile} alt="Fundo Mobile" className="bg-img bg-mobile" />
       <div className="overlay" />
 
+      {/* TÍTULO FIXO */}
+      <div className="titulo-nomes">
+        <h1>Alícia & Walley</h1>
+      </div>
+
       {/* DESKTOP */}
       <div className="conteudo desktop">
-        <h1>Alícia & Walley</h1>
         <p>Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!</p>
         <p>27 de Dezembro de 2025</p>
         <button className="botao" onClick={() => navigate('/convite')}>
@@ -26,12 +30,6 @@ function TelaInicial() {
 
       {/* MOBILE */}
       <div className="conteudo mobile">
-        <div className="topo">
-          <h1>Alícia & Walley</h1>
-        </div>
-
-        <div className="espaco-imagem" />
-
         <div className="baixo">
           <p className="data">
             Deus uniu nossos caminhos e nós, sob sua benção, uniremos nossas vidas para sempre!
