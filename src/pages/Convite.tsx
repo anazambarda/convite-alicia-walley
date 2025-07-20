@@ -1,20 +1,20 @@
 import '../styles/Convite.css';
 import { useEffect, useState, useRef } from 'react';
-import { MdVolumeUp, MdVolumeOff } from 'react-icons/md';
+import { MdVolumeUp, MdVolumeOff, MdMenu, MdClose, MdHome, MdHistory, MdVideoLibrary, MdChurch, MdCelebration, MdCheckCircle } from 'react-icons/md';
 
 import cabecalho from '../assets/bg-desktop.jpg';
 import videoNamoro from '../assets/video_casamento.mp4';
 import logoCasal from '../assets/logo.png';
 import igrejaCerimonia from '../assets/igreja.png';
 import salaoFesta from '../assets/taças.png';
-import musica from '../assets/music.mp3';
-
+import musica from '../assets/Christina Perri - A Thousand Years ｜ The Piano Guys Cover That Will Melt Your Heart.mp3';
 const targetDate = new Date('2025-12-27T16:30:00-03:00');
 
 const Convite = () => {
   const [countdown, setCountdown] = useState({ dias: 0, horas: 0, minutos: 0, segundos: 0 });
   const [mostrarAviso, setMostrarAviso] = useState(true);
   const [audioAtivo, setAudioAtivo] = useState(false);
+  const [menuAberto, setMenuAberto] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -111,9 +111,80 @@ const scrollVoltarParaTopo = (duration: number) => {
     }
   };
 
+  const scrollParaSecao = (id: string): void => {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+      elemento.scrollIntoView({ behavior: 'smooth' });
+      setMenuAberto(false);
+    }
+  };
+
+  const alternarMenu = (): void => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <section className="convite">
       <audio ref={audioRef} src={musica} loop />
+
+      {/* MENU SANDUÍCHE */}
+      <nav className="menu-navegacao">
+        <button className="botao-menu" onClick={alternarMenu} aria-label="Abrir menu">
+          {menuAberto ? <MdClose size={24} /> : <MdMenu size={24} />}
+        </button>
+        
+        {menuAberto && (
+          <div className="menu-overlay" onClick={alternarMenu}>
+            <div className="menu-conteudo" onClick={(e) => e.stopPropagation()}>
+              <div className="menu-header">
+                <h3>Navegação</h3>
+                <p>Clique em um dos botões abaixo para navegar pelo site</p>
+                <button className="botao-fechar" onClick={alternarMenu}>
+                  <MdClose size={24} />
+                </button>
+              </div>
+              <ul className="menu-lista">
+                <li>
+                  <button onClick={() => scrollParaSecao('inicio')}>
+                    <MdHome size={20} />
+                    <span>Início</span>
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollParaSecao('nossa-historia')}>
+                    <MdHistory size={20} />
+                    <span>Nossa História</span>
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollParaSecao('nosso-video')}>
+                    <MdVideoLibrary size={20} />
+                    <span>Nossos Momentos</span>
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollParaSecao('cerimonia')}>
+                    <MdChurch size={20} />
+                    <span>Cerimônia</span>
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollParaSecao('recepcao')}>
+                    <MdCelebration size={20} />
+                    <span>Recepção</span>
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollParaSecao('rsvp')}>
+                    <MdCheckCircle size={20} />
+                    <span>Confirmar Presença</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
+      </nav>
 
       {mostrarAviso && (
         <div className="aviso-audio">
@@ -136,7 +207,7 @@ const scrollVoltarParaTopo = (duration: number) => {
       )}
 
       {/* TOPO COM IMAGEM */}
-      <div className="topo-banner">
+      <div id="inicio" className="topo-banner">
         <img src={cabecalho} alt="Imagem de topo" />
       </div>
 
@@ -159,7 +230,7 @@ const scrollVoltarParaTopo = (duration: number) => {
       <div className="linha-decorada" />
 
       {/* NOSSA HISTÓRIA */}
-      <section className="nossa-historia">
+      <section id="nossa-historia" className="nossa-historia">
         <h3 className="titulo-sessao">Nossa História</h3>
         <div className="caixa-texto">
           <p>
@@ -182,7 +253,7 @@ const scrollVoltarParaTopo = (duration: number) => {
       <div className="linha-decorada" />
 
       {/* VÍDEO */}
-      <section className="nosso-video">
+      <section id="nosso-video" className="nosso-video">
         <h3 className="titulo-sessao">Nossos Momentos</h3>
         <div className="caixa-texto">
           <p>
@@ -200,50 +271,54 @@ const scrollVoltarParaTopo = (duration: number) => {
       <div className="linha-decorada" />
 
       {/* CERIMÔNIA */}
-      <h3 className="titulo-sessao">Cerimônia</h3>
-      <div className="imagem-igreja">
-        <img src={igrejaCerimonia} alt="Igreja da cerimônia" />
-      </div>
-      <div className="cartao-simples" id='igreja-rem'>
-        <p>27 de dezembro de 2025 às 16h30min</p>
-        <p>Igreja São José</p>
-        <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz, RS</p>
-        <a
-          href="https://maps.app.goo.gl/ARA1SyUphaC5rQLw6"
-          target="_blank"
-          rel="noreferrer"
-          className="link-gold"
-        >
-          Ver no mapa
-        </a>
-      </div>
+      <section id="cerimonia">
+        <h3 className="titulo-sessao">Cerimônia</h3>
+        <div className="imagem-igreja">
+          <img src={igrejaCerimonia} alt="Igreja da cerimônia" />
+        </div>
+        <div className="cartao-simples" id='igreja-rem'>
+          <p>27 de dezembro de 2025 às 16h30min</p>
+          <p>Igreja São José</p>
+          <p>Comunidade de Vida e Oração Cidadãos do Infinito - Linha Cereja, Vera Cruz, RS</p>
+          <a
+            href="https://maps.app.goo.gl/ARA1SyUphaC5rQLw6"
+            target="_blank"
+            rel="noreferrer"
+            className="link-gold"
+          >
+            Ver no mapa
+          </a>
+        </div>
+      </section>
 
       <div className="linha-decorada" />
 
       {/* RECEPÇÃO */}
-      <h3 className="titulo-sessao">Recepção</h3>
-      <div className="imagem-igreja">
-        <img src={salaoFesta} alt="Imagem do salão da festa" />
-      </div>
-      <div className="cartao-simples">
-        <p>Venha celebrar conosco esse momento especial!</p>
-        <p>Horário: 19h30min</p>
-        <p>Salão Assmann</p>
-        <p>Estr. Bruno Pritsch - Santa Cruz do Sul, RS</p>
-        <a
-          href="https://maps.app.goo.gl/X7NyNayzBLG1Hom46"
-          target="_blank"
-          rel="noreferrer"
-          className="link-gold"
-        >
-          Ver no mapa
-        </a>
-      </div>
+      <section id="recepcao">
+        <h3 className="titulo-sessao">Recepção</h3>
+        <div className="imagem-igreja">
+          <img src={salaoFesta} alt="Imagem do salão da festa" />
+        </div>
+        <div className="cartao-simples">
+          <p>Venha celebrar conosco esse momento especial!</p>
+          <p>Horário: 19h30min</p>
+          <p>Salão Assmann</p>
+          <p>Estr. Bruno Pritsch - Santa Cruz do Sul, RS</p>
+          <a
+            href="https://maps.app.goo.gl/X7NyNayzBLG1Hom46"
+            target="_blank"
+            rel="noreferrer"
+            className="link-gold"
+          >
+            Ver no mapa
+          </a>
+        </div>
+      </section>
 
       <div className="linha-decorada" />
 
       {/* CONFIRMAÇÃO DE PRESENÇA */}
-      <section className="rsvp">
+      <section id="rsvp" className="rsvp">
         <div style={{ textAlign: 'center', marginTop: '0' }}>
           <h3 className="titulo-sessao" style={{ marginBottom: '1rem', marginTop: '0' }}>
             Contamos com sua Presença
@@ -253,7 +328,7 @@ const scrollVoltarParaTopo = (duration: number) => {
             Clique no botão abaixo para confirmar sua presença:
           </p>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScn0zT351qh8IlptAyePw9qQApL4qa6EYHPa4YUb_-wWXrkZg/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScXhh501z-jd3GYOvJV4pZNp2grWLX-2UTAEBy94utCRcdRTA/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             style={{
