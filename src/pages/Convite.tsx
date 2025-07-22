@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { MdVolumeUp, MdVolumeOff, MdMenu, MdClose, MdHome, MdHistory, MdVideoLibrary, MdChurch, MdCelebration, MdCheckCircle } from 'react-icons/md';
 
 import cabecalho from '../assets/bg-desktop.jpg';
-import videoNamoro from '../assets/video_casamento.mp4';
+import videoNamoro from '../assets/Vídeo de Andrei Mateus Weiland MUTADO.mp4';
 import logoCasal from '../assets/logo.png';
 import igrejaCerimonia from '../assets/igreja.png';
 import salaoFesta from '../assets/taças.png';
@@ -261,7 +261,7 @@ const scrollVoltarParaTopo = (duration: number) => {
             Esperamos que você sinta um pouco da emoção que vivemos em cada cena, cada sorriso e cada escolha até aqui.
             Dê o play quando estiver com o coração preparado para se emocionar com a gente 💛
           </p>
-          <video controls preload="metadata" width="100%">
+          <video controls preload="metadata" width="100%" muted disablePictureInPicture>
             <source src={videoNamoro} type="video/mp4" />
             Seu navegador não suporta vídeos.
           </video>
@@ -323,7 +323,7 @@ const scrollVoltarParaTopo = (duration: number) => {
           <h3 className="titulo-sessao" style={{ marginBottom: '1rem', marginTop: '0' }}>
             Contamos com sua Presença
           </h3>
-          <p className="prazo">Por favor, confirme sua presença até o dia 10 de Novembro de 2025.</p>
+          <p className="prazo">Por favor, confirme sua presença até o dia 10 de dezembro de 2025.</p>
           <p style={{ margin: '2rem 0 1.5rem' }}>
             Clique no botão abaixo para confirmar sua presença:
           </p>
